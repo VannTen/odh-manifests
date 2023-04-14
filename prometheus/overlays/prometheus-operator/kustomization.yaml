@@ -7,3 +7,4 @@ bases:
 resources:
   - subscription.yaml
   - prometheus-monitoring-role.yaml
+  - cluster-monitoring-role.yaml

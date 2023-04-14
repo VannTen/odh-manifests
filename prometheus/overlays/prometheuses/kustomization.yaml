@@ -5,5 +5,6 @@ bases:
   - ../servicemonitors
 
 resources:
+  - cluster-monitoring-role-binding.yaml
   - prometheus-monitoring-role-binding.yaml
   - prometheus.yaml
