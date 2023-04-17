@@ -8,3 +8,17 @@ resources:
   - cluster-monitoring-role-binding.yaml
   - prometheus-monitoring-role-binding.yaml
   - prometheus.yaml
+
+replacements:
+- source:
+    fieldPath: metadata.namespace
+    group: monitoring.coreos.com
+    kind: Prometheus
+    name: odh-monitoring
+    version: v1
+  targets:
+  - select:
+      kind: ClusterRoleBinding
+      name: odh-prometheus-monitoring-rb
+    fieldPaths:
+      - subjects.[name=prometheus-k8s].namespace

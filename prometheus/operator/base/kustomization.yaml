@@ -14,15 +14,3 @@ commonLabels:
 
 generatorOptions:
   disableNameSuffixHash: true
-
-vars:
-  - name: namespace
-    objref:
-      kind: Prometheus
-      name: odh-monitoring
-      apiVersion: monitoring.coreos.com/v1
-    fieldref:
-      fieldpath: metadata.namespace
-
-configurations:
-  - params.yaml
